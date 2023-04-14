@@ -114,6 +114,7 @@ ggplot(data = data.frame(race_percent), aes(x = factor(names(race_percent)), y =
   labs(x = "Race", y = "Percentage of Workforce") +
   theme_minimal()
 
+#Graph of age bands
 ages_df = subset(PastandCurrentEmployees, select = c("ID","Age"))
 
 ages_df$age_band <- cut(ages_df$Age, breaks = c(20, 30, 40, 50, 60, 70), labels = c("20-30", "31-40", "41-50", "51-60", "61-70"))
